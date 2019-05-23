@@ -1,0 +1,27 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/sv" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{sv._id}}">
+    <div class="form-group">
+        <label>Mã SV</label>
+        <input type="text" class="form-control" name="masv" placeholder="Ma sv" value="{{sv.masv}}">
+        <div class="text-danger">
+            {{sv.masvError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Tên SV</label>
+        <input type="text" class="form-control" name="tensv" placeholder="Ten sv" value="{{sv.tensv}}">
+        <div class="text-danger">
+            {{sv.tensvError}}</div>
+    </div>
+    <div class="form-group">      
+        <label>Lớp</label>
+        <input type="text" class="form-control" name="lop" placeholder="Lop" value="{{sv.lop}}">
+        <div class="text-danger">
+            {{sv.lopError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> Submit</button>
+        <a class="btn btn-secondary" href="/sv/list"> View All</a>
+    </div>
+</form>
